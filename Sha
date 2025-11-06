@@ -1,0 +1,878 @@
+I've gathered key information about the hash functions you mentioned and general data security principles. However, I was unable to find or verify the specific link `https://sazwan96.github.io/sha256-sha1-sha512-md5` you provided.
+
+### 🔑 Understanding Hash Functions
+
+The hash functions you listed (SHA256, SHA1, SHA512, MD5) are algorithms that convert input data into a fixed-size string of characters, which is typically a unique digest that represents the original data. They are crucial for data integrity verification, password storage, and security applications.
+
+The table below summarizes these common hash functions:
+
+| Hash Function | Output Size | Security Status & Key Considerations |
+| :--- | :--- | :--- |
+| **MD5** | 128 bits | **Considered cryptographically broken and unsuitable for further use.** Known for critical vulnerabilities and weak collision resistance. |
+| **SHA1** | 160 bits | **No longer considered secure.** Vulnerabilities make it susceptible to collision attacks; recommended to replace it in security-sensitive applications. |
+| **SHA256** | 256 bits | **Currently considered secure.** Part of the SHA-2 family; recommended for high-security applications like digital signatures and certificates. |
+| **SHA512** | 512 bits | **Currently considered secure.** Also part of the SHA-2 family; offers stronger security due to a longer hash length. |
+
+### 🛠️ Generating Hashes on Your System
+
+You can generate checksums of files on Windows without extra software using the built-in `certUtil` command-line tool.
+
+**Command Syntax**:
+```cmd
+certUtil -hashfile "PATH_TO_YOUR_FILE" HASH_ALGORITHM
+```
+
+**Practical Examples**:
+- To get the **MD5** hash of a file: `certUtil -hashfile C:\MyFile.iso MD5`
+- To get the **SHA256** hash of a file: `certUtil -hashfile C:\MyFile.iso SHA256`
+
+The available algorithms include `MD2`, `MD4`, `MD5`, `SHA1`, `SHA256`, `SHA384`, and `SHA512`.
+
+### 🛡️ Broader Data Security Principles
+
+While hash functions are a technical control for data integrity, protecting information involves a wider set of practices, especially for online platforms:
+
+- **Use Robust Encryption**: Ensure data is encrypted during transmission (e.g., using TLS/SSL) and while stored.
+- **Implement Strong Authentication**: Use strong, unique passwords and consider two-factor authentication (2FA) to prevent unauthorized access.
+- **Keep Software Updated**: Regularly update your operating system, applications, and platforms to patch known security vulnerabilities.
+- **Understand Privacy Settings**: Review and adjust the privacy settings on any platforms you use to control how your data is shared and used.
+- **Comply with Regulations**: For projects handling user data, be aware of relevant regulations like GDPR (in the EU) or CCPA (in California, US), which impose strict rules on data privacy and security.
+
+### 🔍 Verifying Your Link and Next Steps
+
+Since I couldn't access the GitHub Pages link you mentioned, here's what you can do:
+
+- **Check the Repository**: Ensure the `sazwan96.github.io` repository exists, has been set up correctly for GitHub Pages, and the site has been built successfully.
+- **Verify the File Path**: Confirm that a file named `sha256-sha1-sha512-md5` (which could be an HTML page, a markdown file, or a tool) exists in the repository.
+- **Local Development**: You can test your GitHub Pages site locally using tools like Jekyll to troubleshoot before pushing it live.
+
+I hope this detailed background on hash functions and data security is helpful for your project. If you can provide more context about the tool or page you are building, I may be able to offer more specific guidance.
+# Data Security & Hash Functions Implementation
+
+## 🔐 Hash Functions Implementation
+
+### HTML Interface with Real-time Hash Calculator
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHA256 | SHA1 | SHA512 | MD5 Hash Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .main-content {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .input-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border: 2px dashed #dee2e6;
+        }
+
+        .output-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        textarea, input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus, input[type="file"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+            font-family: monospace;
+        }
+
+        .algorithm-selector {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .algo-option {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .algo-option:hover {
+            border-color: #667eea;
+        }
+
+        .algo-option.selected {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+
+        .algo-option input {
+            margin-right: 10px;
+        }
+
+        .security-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: auto;
+        }
+
+        .badge-secure {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .badge-insecure {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: transform 0.2s;
+            width: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .hash-result {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            margin-bottom: 15px;
+        }
+
+        .hash-result h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .hash-value {
+            font-family: monospace;
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            word-break: break-all;
+            font-size: 14px;
+            border: 1px solid #e9ecef;
+        }
+
+        .copy-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .copy-btn:hover {
+            background: #218838;
+        }
+
+        .file-info {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            margin-top: 15px;
+        }
+
+        .security-info {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .security-info h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .comparison-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔐 Hash Functions Generator</h1>
+            <p>Generate SHA256, SHA1, SHA512, and MD5 hashes for text and files</p>
+        </div>
+
+        <div class="main-content">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="textInput">Enter Text:</label>
+                    <textarea id="textInput" placeholder="Type or paste your text here..." oninput="generateHashes()"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="fileInput">Or Upload File:</label>
+                    <input type="file" id="fileInput" onchange="handleFileSelect()">
+                </div>
+
+                <div class="algorithm-selector">
+                    <label class="algo-option">
+                        <input type="checkbox" id="md5Check" checked onchange="generateHashes()">
+                        MD5
+                        <span class="security-badge badge-insecure">Insecure</span>
+                    </label>
+                    <label class="algo-option">
+                        <input type="checkbox" id="sha1Check" checked onchange="generateHashes()">
+                        SHA1
+                        <span class="security-badge badge-insecure">Insecure</span>
+                    </label>
+                    <label class="algo-option">
+                        <input type="checkbox" id="sha256Check" checked onchange="generateHashes()">
+                        SHA256
+                        <span class="security-badge badge-secure">Secure</span>
+                    </label>
+                    <label class="algo-option">
+                        <input type="checkbox" id="sha512Check" checked onchange="generateHashes()">
+                        SHA512
+                        <span class="security-badge badge-secure">Secure</span>
+                    </label>
+                </div>
+
+                <button class="btn" onclick="generateHashes()">Generate Hashes</button>
+            </div>
+
+            <div class="output-section">
+                <div id="hashResults">
+                    <div class="hash-result" id="md5Result" style="display: none;">
+                        <h3>MD5 Hash <button class="copy-btn" onclick="copyHash('md5Hash')">Copy</button></h3>
+                        <div class="hash-value" id="md5Hash">-</div>
+                    </div>
+
+                    <div class="hash-result" id="sha1Result" style="display: none;">
+                        <h3>SHA1 Hash <button class="copy-btn" onclick="copyHash('sha1Hash')">Copy</button></h3>
+                        <div class="hash-value" id="sha1Hash">-</div>
+                    </div>
+
+                    <div class="hash-result" id="sha256Result" style="display: none;">
+                        <h3>SHA256 Hash <button class="copy-btn" onclick="copyHash('sha256Hash')">Copy</button></h3>
+                        <div class="hash-value" id="sha256Hash">-</div>
+                    </div>
+
+                    <div class="hash-result" id="sha512Result" style="display: none;">
+                        <h3>SHA512 Hash <button class="copy-btn" onclick="copyHash('sha512Hash')">Copy</button></h3>
+                        <div class="hash-value" id="sha512Hash">-</div>
+                    </div>
+                </div>
+
+                <div class="file-info" id="fileInfo" style="display: none;">
+                    <h3>File Information</h3>
+                    <div id="fileDetails"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="security-info">
+            <h3>🔒 Hash Function Security Information</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Algorithm</th>
+                        <th>Output Size</th>
+                        <th>Security Status</th>
+                        <th>Recommended Use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>MD5</strong></td>
+                        <td>128 bits</td>
+                        <td><span class="badge-insecure">Broken</span></td>
+                        <td>Non-security purposes only</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SHA1</strong></td>
+                        <td>160 bits</td>
+                        <td><span class="badge-insecure">Vulnerable</span></td>
+                        <td>Legacy systems only</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SHA256</strong></td>
+                        <td>256 bits</td>
+                        <td><span class="badge-secure">Secure</span></td>
+                        <td>General purpose, certificates</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SHA512</strong></td>
+                        <td>512 bits</td>
+                        <td><span class="badge-secure">Very Secure</span></td>
+                        <td>High-security applications</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>Created by Muhamad Sazwan Bin Ismail | Data Security Tool</p>
+        </div>
+    </div>
+
+    <script>
+        // Hash generation functions using Web Crypto API
+        async function generateHash(message, algorithm) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(message);
+            
+            switch(algorithm) {
+                case 'SHA-1':
+                    return crypto.subtle.digest('SHA-1', data);
+                case 'SHA-256':
+                    return crypto.subtle.digest('SHA-256', data);
+                case 'SHA-512':
+                    return crypto.subtle.digest('SHA-512', data);
+                default:
+                    throw new Error('Unsupported algorithm');
+            }
+        }
+
+        // MD5 implementation (since Web Crypto doesn't support MD5)
+        function generateMD5(message) {
+            function rotateLeft(lValue, iShiftBits) {
+                return (lValue << iShiftBits) | (lValue >>> (32 - iShiftBits));
+            }
+
+            function addUnsigned(lX, lY) {
+                const lX8 = (lX & 0x80000000);
+                const lY8 = (lY & 0x80000000);
+                const lX4 = (lX & 0x40000000);
+                const lY4 = (lY & 0x40000000);
+                const lResult = (lX & 0x3FFFFFFF) + (lY & 0x3FFFFFFF);
+                
+                if (lX4 & lY4) {
+                    return (lResult ^ 0x80000000 ^ lX8 ^ lY8);
+                }
+                if (lX4 | lY4) {
+                    if (lResult & 0x40000000) {
+                        return (lResult ^ 0xC0000000 ^ lX8 ^ lY8);
+                    } else {
+                        return (lResult ^ 0x40000000 ^ lX8 ^ lY8);
+                    }
+                } else {
+                    return (lResult ^ lX8 ^ lY8);
+                }
+            }
+
+            function F(x, y, z) { return (x & y) | ((~x) & z); }
+            function G(x, y, z) { return (x & z) | (y & (~z)); }
+            function H(x, y, z) { return x ^ y ^ z; }
+            function I(x, y, z) { return y ^ (x | (~z)); }
+
+            function FF(a, b, c, d, x, s, ac) {
+                a = addUnsigned(a, addUnsigned(addUnsigned(F(b, c, d), x), ac));
+                return addUnsigned(rotateLeft(a, s), b);
+            }
+
+            function GG(a, b, c, d, x, s, ac) {
+                a = addUnsigned(a, addUnsigned(addUnsigned(G(b, c, d), x), ac));
+                return addUnsigned(rotateLeft(a, s), b);
+            }
+
+            function HH(a, b, c, d, x, s, ac) {
+                a = addUnsigned(a, addUnsigned(addUnsigned(H(b, c, d), x), ac));
+                return addUnsigned(rotateLeft(a, s), b);
+            }
+
+            function II(a, b, c, d, x, s, ac) {
+                a = addUnsigned(a, addUnsigned(addUnsigned(I(b, c, d), x), ac));
+                return addUnsigned(rotateLeft(a, s), b);
+            }
+
+            function convertToWordArray(string) {
+                const lWordCount;
+                const lMessageLength = string.length;
+                const lNumberOfWords_temp1 = lMessageLength + 8;
+                const lNumberOfWords_temp2 = (lNumberOfWords_temp1 - (lNumberOfWords_temp1 % 64)) / 64;
+                const lNumberOfWords = (lNumberOfWords_temp2 + 1) * 16;
+                const lWordArray = Array(lNumberOfWords - 1);
+                let lBytePosition = 0;
+                let lByteCount = 0;
+                
+                while (lByteCount < lMessageLength) {
+                    lWordCount = (lByteCount - (lByteCount % 4)) / 4;
+                    lBytePosition = (lByteCount % 4) * 8;
+                    lWordArray[lWordCount] = (lWordArray[lWordCount] | (string.charCodeAt(lByteCount) << lBytePosition));
+                    lByteCount++;
+                }
+                
+                lWordCount = (lByteCount - (lByteCount % 4)) / 4;
+                lBytePosition = (lByteCount % 4) * 8;
+                lWordArray[lWordCount] = lWordArray[lWordCount] | (0x80 << lBytePosition);
+                lWordArray[lNumberOfWords - 2] = lMessageLength << 3;
+                lWordArray[lNumberOfWords - 1] = lMessageLength >>> 29;
+                
+                return lWordArray;
+            }
+
+            function wordToHex(lValue) {
+                let WordToHexValue = "", WordToHexValue_temp = "", lByte, lCount;
+                
+                for (lCount = 0; lCount <= 3; lCount++) {
+                    lByte = (lValue >>> (lCount * 8)) & 255;
+                    WordToHexValue_temp = "0" + lByte.toString(16);
+                    WordToHexValue = WordToHexValue + WordToHexValue_temp.substr(WordToHexValue_temp.length - 2, 2);
+                }
+                
+                return WordToHexValue;
+            }
+
+            let x = [];
+            let k, AA, BB, CC, DD, a, b, c, d;
+            const S11 = 7, S12 = 12, S13 = 17, S14 = 22;
+            const S21 = 5, S22 = 9, S23 = 14, S24 = 20;
+            const S31 = 4, S32 = 11, S33 = 16, S34 = 23;
+            const S41 = 6, S42 = 10, S43 = 15, S44 = 21;
+
+            x = convertToWordArray(message);
+
+            a = 0x67452301;
+            b = 0xEFCDAB89;
+            c = 0x98BADCFE;
+            d = 0x10325476;
+
+            for (k = 0; k < x.length; k += 16) {
+                AA = a;
+                BB = b;
+                CC = c;
+                DD = d;
+                a = FF(a, b, c, d, x[k + 0], S11, 0xD76AA478);
+                d = FF(d, a, b, c, x[k + 1], S12, 0xE8C7B756);
+                c = FF(c, d, a, b, x[k + 2], S13, 0x242070DB);
+                b = FF(b, c, d, a, x[k + 3], S14, 0xC1BDCEEE);
+                a = FF(a, b, c, d, x[k + 4], S11, 0xF57C0FAF);
+                d = FF(d, a, b, c, x[k + 5], S12, 0x4787C62A);
+                c = FF(c, d, a, b, x[k + 6], S13, 0xA8304613);
+                b = FF(b, c, d, a, x[k + 7], S14, 0xFD469501);
+                a = FF(a, b, c, d, x[k + 8], S11, 0x698098D8);
+                d = FF(d, a, b, c, x[k + 9], S12, 0x8B44F7AF);
+                c = FF(c, d, a, b, x[k + 10], S13, 0xFFFF5BB1);
+                b = FF(b, c, d, a, x[k + 11], S14, 0x895CD7BE);
+                a = FF(a, b, c, d, x[k + 12], S11, 0x6B901122);
+                d = FF(d, a, b, c, x[k + 13], S12, 0xFD987193);
+                c = FF(c, d, a, b, x[k + 14], S13, 0xA679438E);
+                b = FF(b, c, d, a, x[k + 15], S14, 0x49B40821);
+                a = GG(a, b, c, d, x[k + 1], S21, 0xF61E2562);
+                d = GG(d, a, b, c, x[k + 6], S22, 0xC040B340);
+                c = GG(c, d, a, b, x[k + 11], S23, 0x265E5A51);
+                b = GG(b, c, d, a, x[k + 0], S24, 0xE9B6C7AA);
+                a = GG(a, b, c, d, x[k + 5], S21, 0xD62F105D);
+                d = GG(d, a, b, c, x[k + 10], S22, 0x2441453);
+                c = GG(c, d, a, b, x[k + 15], S23, 0xD8A1E681);
+                b = GG(b, c, d, a, x[k + 4], S24, 0xE7D3FBC8);
+                a = GG(a, b, c, d, x[k + 9], S21, 0x21E1CDE6);
+                d = GG(d, a, b, c, x[k + 14], S22, 0xC33707D6);
+                c = GG(c, d, a, b, x[k + 3], S23, 0xF4D50D87);
+                b = GG(b, c, d, a, x[k + 8], S24, 0x455A14ED);
+                a = GG(a, b, c, d, x[k + 13], S21, 0xA9E3E905);
+                d = GG(d, a, b, c, x[k + 2], S22, 0xFCEFA3F8);
+                c = GG(c, d, a, b, x[k + 7], S23, 0x676F02D9);
+                b = GG(b, c, d, a, x[k + 12], S24, 0x8D2A4C8A);
+                a = HH(a, b, c, d, x[k + 5], S31, 0xFFFA3942);
+                d = HH(d, a, b, c, x[k + 8], S32, 0x8771F681);
+                c = HH(c, d, a, b, x[k + 11], S33, 0x6D9D6122);
+                b = HH(b, c, d, a, x[k + 14], S34, 0xFDE5380C);
+                a = HH(a, b, c, d, x[k + 1], S31, 0xA4BEEA44);
+                d = HH(d, a, b, c, x[k + 4], S32, 0x4BDECFA9);
+                c = HH(c, d, a, b, x[k + 7], S33, 0xF6BB4B60);
+                b = HH(b, c, d, a, x[k + 10], S34, 0xBEBFBC70);
+                a = HH(a, b, c, d, x[k + 13], S31, 0x289B7EC6);
+                d = HH(d, a, b, c, x[k + 0], S32, 0xEAA127FA);
+                c = HH(c, d, a, b, x[k + 3], S33, 0xD4EF3085);
+                b = HH(b, c, d, a, x[k + 6], S34, 0x4881D05);
+                a = HH(a, b, c, d, x[k + 9], S31, 0xD9D4D039);
+                d = HH(d, a, b, c, x[k + 12], S32, 0xE6DB99E5);
+                c = HH(c, d, a, b, x[k + 15], S33, 0x1FA27CF8);
+                b = HH(b, c, d, a, x[k + 2], S34, 0xC4AC5665);
+                a = II(a, b, c, d, x[k + 0], S41, 0xF4292244);
+                d = II(d, a, b, c, x[k + 7], S42, 0x432AFF97);
+                c = II(c, d, a, b, x[k + 14], S43, 0xAB9423A7);
+                b = II(b, c, d, a, x[k + 5], S44, 0xFC93A039);
+                a = II(a, b, c, d, x[k + 12], S41, 0x655B59C3);
+                d = II(d, a, b, c, x[k + 3], S42, 0x8F0CCC92);
+                c = II(c, d, a, b, x[k + 10], S43, 0xFFEFF47D);
+                b = II(b, c, d, a, x[k + 1], S44, 0x85845DD1);
+                a = II(a, b, c, d, x[k + 8], S41, 0x6FA87E4F);
+                d = II(d, a, b, c, x[k + 15], S42, 0xFE2CE6E0);
+                c = II(c, d, a, b, x[k + 6], S43, 0xA3014314);
+                b = II(b, c, d, a, x[k + 13], S44, 0x4E0811A1);
+                a = II(a, b, c, d, x[k + 4], S41, 0xF7537E82);
+                d = II(d, a, b, c, x[k + 11], S42, 0xBD3AF235);
+                c = II(c, d, a, b, x[k + 2], S43, 0x2AD7D2BB);
+                b = II(b, c, d, a, x[k + 9], S44, 0xEB86D391);
+                a = addUnsigned(a, AA);
+                b = addUnsigned(b, BB);
+                c = addUnsigned(c, CC);
+                d = addUnsigned(d, DD);
+            }
+
+            const temp = wordToHex(a) + wordToHex(b) + wordToHex(c) + wordToHex(d);
+            return temp.toLowerCase();
+        }
+
+        // Convert array buffer to hex string
+        function arrayBufferToHex(buffer) {
+            const byteArray = new Uint8Array(buffer);
+            const hexParts = [];
+            for (let i = 0; i < byteArray.length; i++) {
+                const hex = byteArray[i].toString(16);
+                const paddedHex = ('00' + hex).slice(-2);
+                hexParts.push(paddedHex);
+            }
+            return hexParts.join('');
+        }
+
+        // Main hash generation function
+        async function generateHashes() {
+            const textInput = document.getElementById('textInput').value;
+            const fileInput = document.getElementById('fileInput');
+            
+            let content = textInput;
+            let isFile = false;
+
+            // If file is selected, read its content
+            if (fileInput.files.length > 0 && !textInput) {
+                const file = fileInput.files[0];
+                content = await readFileAsText(file);
+                isFile = true;
+                
+                // Display file information
+                document.getElementById('fileInfo').style.display = 'block';
+                document.getElementById('fileDetails').innerHTML = `
+                    <p><strong>Filename:</strong> ${file.name}</p>
+                    <p><strong>Size:</strong> ${formatFileSize(file.size)}</p>
+                    <p><strong>Type:</strong> ${file.type || 'Unknown'}</p>
+                    <p><strong>Last Modified:</strong> ${new Date(file.lastModified).toLocaleString()}</p>
+                `;
+            }
+
+            if (!content) {
+                alert('Please enter text or select a file');
+                return;
+            }
+
+            // Generate hashes based on selected algorithms
+            const algorithms = [
+                { id: 'md5Check', result: 'md5Result', hash: 'md5Hash', func: async (c) => generateMD5(c) },
+                { id: 'sha1Check', result: 'sha1Result', hash: 'sha1Hash', func: async (c) => {
+                    const buffer = await generateHash(c, 'SHA-1');
+                    return arrayBufferToHex(buffer);
+                }},
+                { id: 'sha256Check', result: 'sha256Result', hash: 'sha256Hash', func: async (c) => {
+                    const buffer = await generateHash(c, 'SHA-256');
+                    return arrayBufferToHex(buffer);
+                }},
+                { id: 'sha512Check', result: 'sha512Result', hash: 'sha512Hash', func: async (c) => {
+                    const buffer = await generateHash(c, 'SHA-512');
+                    return arrayBufferToHex(buffer);
+                }}
+            ];
+
+            for (const algo of algorithms) {
+                const checkbox = document.getElementById(algo.id);
+                const resultDiv = document.getElementById(algo.result);
+                const hashDiv = document.getElementById(algo.hash);
+
+                if (checkbox.checked) {
+                    try {
+                        const hash = await algo.func(content);
+                        hashDiv.textContent = hash;
+                        resultDiv.style.display = 'block';
+                    } catch (error) {
+                        hashDiv.textContent = 'Error generating hash';
+                        resultDiv.style.display = 'block';
+                        console.error(`Error generating ${algo.id}:`, error);
+                    }
+                } else {
+                    resultDiv.style.display = 'none';
+                }
+            }
+        }
+
+        // File handling functions
+        function readFileAsText(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = e => resolve(e.target.result);
+                reader.onerror = reject;
+                reader.readAsText(file);
+            });
+        }
+
+        function handleFileSelect() {
+            document.getElementById('textInput').value = '';
+            generateHashes();
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        function copyHash(elementId) {
+            const hashElement = document.getElementById(elementId);
+            const textArea = document.createElement('textarea');
+            textArea.value = hashElement.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            
+            // Visual feedback
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = 'Copied!';
+            button.style.background = '#17a2b8';
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '';
+            }, 2000);
+        }
+
+        // Initialize with example
+        window.onload = function() {
+            document.getElementById('textInput').value = 'Hello, World!';
+            generateHashes();
+        };
+    </script>
+</body>
+</html>
+```
+
+## 🚀 Deployment Instructions
+
+### 1. GitHub Pages Deployment
+
+Create a GitHub repository and deploy this tool:
+
+```bash
+# Create new repository
+git init
+git add .
+git commit -m "Add Hash Functions Generator"
+git branch -M main
+git remote add origin https://github.com/sazwan96/sha256-sha1-sha512-md5.git
+git push -u origin main
+```
+
+### 2. Enable GitHub Pages
+1. Go to repository Settings
+2. Scroll to "Pages" section
+3. Select "Deploy from branch"
+4. Choose "main" branch and "/root" folder
+5. Save - your site will be available at: `https://sazwan96.github.io/sha256-sha1-sha512-md5`
+
+## 🔧 Additional Security Features
+
+### Enhanced Security Implementation
+
+```javascript
+// Additional security features for production
+class SecurityManager {
+    constructor() {
+        this.rateLimit = new Map();
+        this.maxRequests = 100; // per hour
+    }
+
+    checkRateLimit(ip) {
+        const now = Date.now();
+        const windowStart = now - (60 * 60 * 1000); // 1 hour window
+        
+        if (!this.rateLimit.has(ip)) {
+            this.rateLimit.set(ip, []);
+        }
+        
+        const requests = this.rateLimit.get(ip).filter(time => time > windowStart);
+        this.rateLimit.set(ip, requests);
+        
+        if (requests.length >= this.maxRequests) {
+            throw new Error('Rate limit exceeded');
+        }
+        
+        requests.push(now);
+        return true;
+    }
+
+    sanitizeInput(input) {
+        // Remove potentially dangerous characters
+        return input.replace(/[<>]/g, '');
+    }
+
+    validateHashInput(input) {
+        if (input.length > 1000000) { // 1MB limit
+            throw new Error('Input too large');
+        }
+        return true;
+    }
+}
+```
+
+## 📊 Data Security Best Practices
+
+### Security Implementation Guide
+
+```yaml
+# security-config.yml
+security_measures:
+  hash_functions:
+    recommended:
+      - "SHA256 for general purpose"
+      - "SHA512 for high security"
+      - "Argon2 for passwords"
+      - "bcrypt for password storage"
+    
+    deprecated:
+      - "MD5 - completely broken"
+      - "SHA1 - vulnerable to collisions"
+  
+  encryption:
+    symmetric: "AES-256-GCM"
+    asymmetric: "RSA-2048 or ECC"
+    key_management: "HSM or secure key storage"
+  
+  data_protection:
+    - "Always use HTTPS"
+    - "Implement proper CORS policies"
+    - "Sanitize all user inputs"
+    - "Rate limiting on API endpoints"
+    - "Regular security audits"
+
+compliance:
+  gdpr:
+    - "Data minimization"
+    - "User consent management"
+    - "Right to be forgotten"
+  
+  hipaa:
+    - "Encrypt health data at rest and in transit"
+    - "Access controls and audit trails"
+```
+
+This implementation provides a complete, secure hash generation tool that can be deployed to your GitHub Pages site. The interface is user-friendly and includes real-time hash generation with proper security warnings about deprecated algorithms.
