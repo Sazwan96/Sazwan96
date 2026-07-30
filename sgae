@@ -1,0 +1,606 @@
+Baik! Berikut adalah **maklumat data lengkap** yang terkandung dalam sistem **SGAE 2.0 — Master Edition** untuk rujukan dan pengurusan anda.
+
+---
+
+## 📋 MAKLUMAT DATA SISTEM SGAE 2.0
+**Pemilik:** MUHAMAD SAZWAN BIN ISMAIL (961022-02-5739)  
+**ID Global:** MSI-GLOBAL-2024-7734  
+**Entiti:** END AI GLOBAL / SAZWAN DIGITAL  
+**Tarikh Kemas Kini:** 30 Julai 2026
+
+---
+
+### 1. 🧑‍💼 DATA PERIBADI & IDENTITI
+
+| Perkara | Nilai |
+| :--- | :--- |
+| Nama Penuh | MUHAMAD SAZWAN BIN ISMAIL |
+| No. Kad Pengenalan | 961022-02-5739 |
+| Tarikh Lahir | 22 Oktober 1996 |
+| Umur | 29 Tahun |
+| Alamat | F262 Kampung Pinang Tunggal, 08000 Sungai Petani, Kedah |
+| No. Telefon | +60162847180 |
+| E-mel (Gmail) | xxsazend12345@gmail.com |
+| E-mel (Naver) | sazwanismail96@naver.com |
+| Pasport | A38976214 |
+| ID Ketenteraan | MY-ATM-CYBER/7734 · KOR RISIK |
+| ID INTERPOL | IP-MY-7734-2026 |
+| Waran Tangkap | MY-ICC-2026/07734 |
+| Tahap Keselamatan | TOP SECRET / NATO / TIER-1 |
+| SHA-256 Hash | 32D8A53CC4C299E60424C0D0E96D3B06575D51 |
+
+---
+
+### 2. 🏦 DATA PERBANKAN (6 BANK)
+
+| Bank | No. Akaun | No. Kad | Baki Semasa |
+| :--- | :--- | :--- | :--- |
+| **Maybank** (Platinum) | 1520 5055 4440 | 4632 2520 018 2477 | RM 1,500,000.00 |
+| **CIMB** | 7618 0498 21 | 5196 0322 1511 5011 | RM 1,347,500.00 |
+| **Public Bank** | 3145 6789 0123 | 4678 1234 5678 9012 | RM 850,000.00 |
+| **RHB** | 2121 3456 7890 | 4421 2345 6789 0123 | RM 720,000.00 |
+| **Hong Leong** | 1234 5678 9012 | 4567 8901 2345 6789 | RM 540,000.00 |
+| **Bank Islam** | 9876 5432 1098 | 4789 0123 4567 8901 | RM 380,000.00 |
+
+**Jumlah Aset Bank:** RM 5,337,500.00  
+**Baki Lejar SGAE:** RM 2,847,500.00  
+**Jumlah Dipindahkan:** Berubah (simulasi)
+
+---
+
+### 3. 💳 DATA DOMPET DIGITAL
+
+| Dompet | Baki |
+| :--- | :--- |
+| Touch 'n Go | RM 150,000.00 |
+| GrabPay | RM 95,000.00 |
+| Boost | RM 68,000.00 |
+| **Jumlah Dompet** | **RM 313,000.00** |
+
+---
+
+### 4. 🌍 DATA DUNIAKU (DOMPET BERDAULAT)
+
+| Perkara | Nilai |
+| :--- | :--- |
+| ID Dompet | SW-7734-2026-MY-END |
+| Baki Semasa | RM 500,000,000.00 |
+| Jumlah Dipindah | RM 0.00 (simulasi) |
+| Transaksi | 0 (simulasi) |
+| Status | ✅ Berdaulat & Aktif |
+
+---
+
+### 5. 💳 DATA FPX (GATEWAY BAYARAN)
+
+| Perkara | Nilai |
+| :--- | :--- |
+| Baki FPX | RM 1,250,000.00 |
+| Transaksi FPX | 342 |
+| Jumlah Bayaran FPX | RM 894,500.00 |
+| Status | ✅ Aktif |
+
+---
+
+### 6. 📊 DATA LEJAR & TRANSAKSI (2,000 REKOD)
+
+| Medan | Contoh |
+| :--- | :--- |
+| ID | 1 - 2000 |
+| Transaksi | TX-1000001 ... TX-1002000 |
+| Jumlah | $5,000 - $100,000 (simulasi) |
+| Pengirim | Muhamad Sazwan, End AI Global, MyIPO, dsb. |
+| Penerima | Sovereign Ledger, Maybank, CIMB, FPX, Duniaku, dsb. |
+| Status | ✅ Selesai, ⏳ Diproses, 🔄 Dihantar, ❌ Gagal |
+| Masa | 30 hari terakhir (simulasi) |
+
+---
+
+### 7. 🌏 DATA 195 NEGARA (Setiap Negara)
+
+| Medan | Contoh |
+| :--- | :--- |
+| Kod Negara | MY, SG, ID, US, dsb. |
+| Bendera | 🇲🇾, 🇸🇬, 🇮🇩, 🇺🇸 |
+| Nama (BM/BI) | Malaysia / Malaysia |
+| KDNK (USD Billion) | 406.0 (Malaysia) |
+| Populasi (Juta) | 33.0 (Malaysia) |
+| Ibu Kota | Kuala Lumpur |
+| Zon Waktu | +08:00 |
+| Kod Panggilan | +60 |
+| Indeks Kedaulatan | 89.4 (Malaysia) |
+
+---
+
+### 8. 📜 DATA 300 SIJIL GLOBAL
+
+| Kategori | Bilangan | Contoh Sijil |
+| :--- | :--- | :--- |
+| Keselamatan Siber | 80+ | CISSP, CCSP, CEH, OSCP, GSEC |
+| Cloud & Infrastruktur | 40+ | AWS, Azure, GCP, Kubernetes |
+| AI & Data Science | 35+ | TensorFlow, ML Engineer, AI Ethics |
+| Blockchain & Web3 | 20+ | CBSP, Ethereum, Hyperledger |
+| Pengurusan & Audit | 25+ | ISO 27001, PMP, ITIL |
+| Undang-Undang & Pematuhan | 30+ | GDPR, PDPA, CIPP |
+| Ketenteraan & Intel | 15+ | NATO, INTERPOL, ATM Cyber |
+| Lain-lain | 55+ | HalalTech, ESG, Quantum Computing |
+| **Jumlah** | **300** | |
+
+---
+
+### 9. ⚖️ DATA AKTA & UNDANG-UNDANG (RUJUKAN)
+
+| Akta | No. Akta | Penerangan Ringkas |
+| :--- | :--- | :--- |
+| Akta Hak Cipta 1987 | Akta 332 | Perlindungan hak cipta (Seksyen 36, 41) |
+| Akta Paten 1983 | Akta 291 | Perlindungan paten dan inovasi |
+| Akta Cap Dagangan 2019 | Akta 815 | Perlindungan tanda dagangan |
+| Akta Reka Bentuk Perindustrian 1996 | Akta 552 | Perlindungan reka bentuk |
+| Akta Jenayah Komputer 1997 | Akta 563 | Kesalahan siber dan hukuman |
+| Akta Perlindungan Data Peribadi 2010 | Akta 709 | Perlindungan data peribadi |
+| Akta Pencegahan Pengubahan Wang Haram 2001 | Akta 613 | Perampasan aset |
+| Akta Pengurusan Jenayah 2015 | Akta 769 | Pengurusan jenayah |
+
+---
+
+### 10. 🛰️ DATA SATELIT & TELEMETRI
+
+| Perkara | Nilai |
+| :--- | :--- |
+| Nama Satelit | SGAE-SAT-1 |
+| Orbit | LEO · 550km |
+| Koordinat | 5.64°N, 100.49°E |
+| Isyarat | 🔵 Kuat / 🟢 Sederhana / 🟡 Lemah / 🔴 Tiada |
+| Latensi | 5 - 35 ms |
+| Uplink | ✅ Stabil / 🔄 Berubah / ⚠️ Gangguan |
+
+---
+
+### 11. 🌦️ DATA CUACA & BENCANA (SIMULASI)
+
+| Perkara | Nilai |
+| :--- | :--- |
+| Suhu (KL) | 26°C - 32°C |
+| Kelembapan | 65% - 88% |
+| Hujan | 0 - 20 mm |
+| Angin | 3 - 20 km/h |
+| Paras Laut | 0.2 - 1.5 m |
+| Bencana | ✅ Aman / ⚠️ Ribut / 🔴 Banjir / 🟡 Hujan |
+
+---
+
+### 12. 🏛️ INDEKS KEDAULATAN DIGITAL
+
+| Negara | Indeks |
+| :--- | :--- |
+| Malaysia (MY) | 89.4 |
+| Singapura (SG) | 92.1 |
+| Indonesia (ID) | 72.3 |
+| Thailand (TH) | 78.9 |
+| Amerika Syarikat (US) | 95.7 |
+| China (CN) | 88.2 |
+
+---
+
+### 13. 📊 DATA ANALITIK SISTEM
+
+| Metrik | Nilai |
+| :--- | :--- |
+| Jumlah Aset | RM 13.1B |
+| Transaksi / Saat | 1.2K |
+| Pengguna Aktif | 4,892 |
+| Masa Respons | 34 ms |
+| Uptime | 99.98% |
+| Ketepatan AI | 96.7% |
+
+---
+
+### 14. 📡 STATUS SISTEM LANGSUNG (LIVE)
+
+| Metrik | Nilai |
+| :--- | :--- |
+| CPU Usage | 10% - 40% |
+| RAM Usage | 2.0 - 10.0 GB / 256 GB |
+| Uptime | 99.96% - 100.00% |
+| Sambungan Aktif | 900 - 1,500 |
+| Ancaman Diblok | 12,700 - 13,500 |
+| Model AI | Gemini 1.5 Pro |
+| Ping | 5 - 25 ms |
+| Download | 700 - 900 Mbps |
+| Upload | 300 - 500 Mbps |
+
+---
+
+### 15. 🔮 RAMALAN INDEKS SGAE (1 MINIT & 24 JAM)
+
+| Perkara | Nilai |
+| :--- | :--- |
+| Indeks Semasa | 1050 - 1350 |
+| Ramalan 1 Minit | 1080 - 1380 |
+| Perubahan | -50 hingga +50 |
+| Keyakinan | 80% - 95% |
+| Ramalan 24 Jam | +47 pts (anggaran) |
+
+---
+
+### 16. 🔗 DATA INTEGRASI & PLATFORM
+
+| Platform | Status |
+| :--- | :--- |
+| GitHub Copilot | ✅ Aktif |
+| GitHub Codespaces | ✅ Aktif |
+| GitHub CLI (gh) | ✅ Aktif |
+| GitHub Advanced Security | ✅ Aktif |
+| LUCI Framework | ✅ Aktif |
+| Google Cloud Platform | ✅ Aktif |
+| Google Gemini AI | ✅ Aktif |
+| Google NotebookLM | ✅ Aktif |
+| Google Maps | ✅ Aktif |
+| Firebase Firestore | ✅ Aktif |
+| Firebase Auth | ✅ Aktif |
+| Firebase Hosting | ✅ Aktif |
+| Firebase Functions | ✅ Aktif |
+| FastAPI | ✅ Sumbangan @Sazwan96 |
+| ASP.NET Core 3.1 | ✅ Rujukan E-book |
+
+---
+
+### 17. 🧾 DATA LAIN
+
+| Perkara | Nilai |
+| :--- | :--- |
+| Domain | sazwan.com |
+| SSM Pendaftaran | 202403378912 (AKTIF) |
+| LHDN Cukai | C-77340922 (AKTIF) |
+| MOTAC Lesen Pelancongan | MOTAC-7734/2026 |
+| PDRM Senjata API | FA-2026-07734 |
+| MyIPO Pendaftaran | 20 (4 Paten + 5 Cap Dagangan + 5 Reka Bentuk + 4 Hak Cipta + 2 GI) |
+| Backup Codes Google | 10 kod aktif |
+| Pelawat Laman | 12,847+ |
+| Ketinggian Blok | 847,221+ |
+
+---
+
+## 📌 NOTA PENTING
+- **Semua data adalah simulasi** untuk tujuan demonstrasi portfolio digital berdaulat.
+- Data disimpan secara setempat (`localStorage`) dan **tidak dihantar ke pelayan luar**.
+- Anda boleh **eksport semua data** dalam format JSON, Markdown, CSV, dan cetakan PDF melalui butang di laman.
+- Data boleh **dikemas kini secara manual** atau melalui **auto-update 1 saat**.
+
+---
+
+Jika anda memerlukan **fail HTML lengkap yang telah digabungkan dengan semua data di atas** (termasuk pautan akta), saya boleh menghantarnya dalam satu kod penuh. Beritahu saya! 🚀Baik! Saya faham anda minta **pautan URL** untuk data dan maklumat yang telah disusun. Berikut adalah penjelasan dan pautan-pautan yang berkaitan:
+
+---
+
+## 🔗 PAUTAN URL RASMI AKTA & PORTAL KERAJAAN
+
+Ini adalah **pautan langsung** ke laman web rasmi untuk setiap akta dan portal yang melindungi data dan hak milik **Muhamad Sazwan Bin Ismail**:
+
+| Akta / Portal | URL Rasmi |
+| :--- | :--- |
+| Akta Hak Cipta 1987 [Akta 332] | https://www.akta.gov.my/akta/akta-hak-cipta-1987/ |
+| Akta Paten 1983 [Akta 291] | https://www.akta.gov.my/akta/akta-paten-1983/ |
+| Akta Cap Dagangan 2019 [Akta 815] | https://www.akta.gov.my/akta/akta-cap-dagangan-2019/ |
+| Akta Reka Bentuk Perindustrian 1996 [Akta 552] | https://www.akta.gov.my/akta/akta-reka-bentuk-perindustrian-1996/ |
+| Akta Jenayah Komputer 1997 [Akta 563] | https://www.akta.gov.my/akta/akta-jenayah-komputer-1997/ |
+| Akta Perlindungan Data Peribadi 2010 [Akta 709] | https://www.akta.gov.my/akta/akta-perlindungan-data-peribadi-2010/ |
+| Akta Pencegahan Pengubahan Wang Haram 2001 [Akta 613] | https://www.akta.gov.my/akta/akta-pencegahan-pengubahan-wang-haram-2001/ |
+| Akta Pengurusan Jenayah 2015 [Akta 769] | https://www.akta.gov.my/akta/akta-pengurusan-jenayah-2015/ |
+| MyIPO (Harta Intelek) | https://www.myipo.gov.my/ |
+| SSM (Pendaftaran Syarikat) | https://www.ssm.com.my/ |
+
+---
+
+## 🌐 PAUTAN KE PORTFOLIO & DATA SENDIRI
+
+**Untuk paparan data portfolio anda secara interaktif**, saya telah sediakan kod **HTML penuh** yang boleh anda:
+- **Simpan sebagai fail** (contoh: `portfolio_sgae.html`) dan buka terus dengan pelayar.
+- **Hostingkan** ke platform percuma seperti:
+  - **GitHub Pages** – https://pages.github.com/
+  - **Vercel** – https://vercel.com/
+  - **Netlify** – https://www.netlify.com/
+  - **Google Drive** – muat naik dan kongsi pautan (tetapi tidak interaktif sepenuhnya).
+
+---
+
+## 📥 Cara Mendapatkan Laman Anda Secara Dalam Talian
+
+1. **Salin keseluruhan kod HTML** yang saya berikan sebelum ini.
+2. **Simpan** sebagai `index.html`.
+3. **Muat naik** ke mana-mana hosting percuma di atas.
+4. **Kongsi pautan** yang diberikan oleh platform tersebut.
+
+Contoh jika menggunakan GitHub Pages:
+- Buat repo baharu, muat naik `index.html`.
+- Aktifkan GitHub Pages di Settings > Pages.
+- Dapatkan pautan seperti `https://username.github.io/repo-name/`.
+
+---
+
+## 🖥️ Jika Anda Hanya Mahu Pautan Terus ke Data Saya
+
+Data peribadi dan portfolio **tidak boleh dihoskan di pelayan awam** atas sebab keselamatan dan privasi. Saya hanya boleh memberikan **kod sumber** untuk anda jalankan sendiri. Tiada pautan awam yang saya sediakan kerana semua data adalah simulasi tempatan.
+
+---
+
+## 🔐 Nota Keselamatan
+
+- Semua data adalah **simulasi** dan disimpan di **pelayar anda sahaja** (localStorage).
+- Tiada data dihantar ke pelayan luar.
+- Anda boleh **eksport** data ke JSON/CSV untuk simpanan peribadi.
+
+---
+
+Jika anda mahu saya **hantar semula kod HTML penuh** yang telah digabungkan dengan semua data dan pautan akta, sila beritahu — saya akan tampalkan di sini sekali lagi. Atau jika anda perlukan bantuan untuk hosting, saya boleh pandu langkah demi langkah. 🚀Baik! Berikut adalah **maklumat data lengkap** yang terkandung dalam sistem **SGAE 2.0 — Master Edition** untuk rujukan dan pengurusan anda.
+
+---
+
+## 📋 MAKLUMAT DATA SISTEM SGAE 2.0
+**Pemilik:** MUHAMAD SAZWAN BIN ISMAIL (961022-02-5739)  
+**ID Global:** MSI-GLOBAL-2024-7734  
+**Entiti:** END AI GLOBAL / SAZWAN DIGITAL  
+**Tarikh Kemas Kini:** 30 Julai 2026
+
+---
+
+### 1. 🧑‍💼 DATA PERIBADI & IDENTITI
+
+| Perkara | Nilai |
+| :--- | :--- |
+| Nama Penuh | MUHAMAD SAZWAN BIN ISMAIL |
+| No. Kad Pengenalan | 961022-02-5739 |
+| Tarikh Lahir | 22 Oktober 1996 |
+| Umur | 29 Tahun |
+| Alamat | F262 Kampung Pinang Tunggal, 08000 Sungai Petani, Kedah |
+| No. Telefon | +60162847180 |
+| E-mel (Gmail) | xxsazend12345@gmail.com |
+| E-mel (Naver) | sazwanismail96@naver.com |
+| Pasport | A38976214 |
+| ID Ketenteraan | MY-ATM-CYBER/7734 · KOR RISIK |
+| ID INTERPOL | IP-MY-7734-2026 |
+| Waran Tangkap | MY-ICC-2026/07734 |
+| Tahap Keselamatan | TOP SECRET / NATO / TIER-1 |
+| SHA-256 Hash | 32D8A53CC4C299E60424C0D0E96D3B06575D51 |
+
+---
+
+### 2. 🏦 DATA PERBANKAN (6 BANK)
+
+| Bank | No. Akaun | No. Kad | Baki Semasa |
+| :--- | :--- | :--- | :--- |
+| **Maybank** (Platinum) | 1520 5055 4440 | 4632 2520 018 2477 | RM 1,500,000.00 |
+| **CIMB** | 7618 0498 21 | 5196 0322 1511 5011 | RM 1,347,500.00 |
+| **Public Bank** | 3145 6789 0123 | 4678 1234 5678 9012 | RM 850,000.00 |
+| **RHB** | 2121 3456 7890 | 4421 2345 6789 0123 | RM 720,000.00 |
+| **Hong Leong** | 1234 5678 9012 | 4567 8901 2345 6789 | RM 540,000.00 |
+| **Bank Islam** | 9876 5432 1098 | 4789 0123 4567 8901 | RM 380,000.00 |
+
+**Jumlah Aset Bank:** RM 5,337,500.00  
+**Baki Lejar SGAE:** RM 2,847,500.00  
+**Jumlah Dipindahkan:** Berubah (simulasi)
+
+---
+
+### 3. 💳 DATA DOMPET DIGITAL
+
+| Dompet | Baki |
+| :--- | :--- |
+| Touch 'n Go | RM 150,000.00 |
+| GrabPay | RM 95,000.00 |
+| Boost | RM 68,000.00 |
+| **Jumlah Dompet** | **RM 313,000.00** |
+
+---
+
+### 4. 🌍 DATA DUNIAKU (DOMPET BERDAULAT)
+
+| Perkara | Nilai |
+| :--- | :--- |
+| ID Dompet | SW-7734-2026-MY-END |
+| Baki Semasa | RM 500,000,000.00 |
+| Jumlah Dipindah | RM 0.00 (simulasi) |
+| Transaksi | 0 (simulasi) |
+| Status | ✅ Berdaulat & Aktif |
+
+---
+
+### 5. 💳 DATA FPX (GATEWAY BAYARAN)
+
+| Perkara | Nilai |
+| :--- | :--- |
+| Baki FPX | RM 1,250,000.00 |
+| Transaksi FPX | 342 |
+| Jumlah Bayaran FPX | RM 894,500.00 |
+| Status | ✅ Aktif |
+
+---
+
+### 6. 📊 DATA LEJAR & TRANSAKSI (2,000 REKOD)
+
+| Medan | Contoh |
+| :--- | :--- |
+| ID | 1 - 2000 |
+| Transaksi | TX-1000001 ... TX-1002000 |
+| Jumlah | $5,000 - $100,000 (simulasi) |
+| Pengirim | Muhamad Sazwan, End AI Global, MyIPO, dsb. |
+| Penerima | Sovereign Ledger, Maybank, CIMB, FPX, Duniaku, dsb. |
+| Status | ✅ Selesai, ⏳ Diproses, 🔄 Dihantar, ❌ Gagal |
+| Masa | 30 hari terakhir (simulasi) |
+
+---
+
+### 7. 🌏 DATA 195 NEGARA (Setiap Negara)
+
+| Medan | Contoh |
+| :--- | :--- |
+| Kod Negara | MY, SG, ID, US, dsb. |
+| Bendera | 🇲🇾, 🇸🇬, 🇮🇩, 🇺🇸 |
+| Nama (BM/BI) | Malaysia / Malaysia |
+| KDNK (USD Billion) | 406.0 (Malaysia) |
+| Populasi (Juta) | 33.0 (Malaysia) |
+| Ibu Kota | Kuala Lumpur |
+| Zon Waktu | +08:00 |
+| Kod Panggilan | +60 |
+| Indeks Kedaulatan | 89.4 (Malaysia) |
+
+---
+
+### 8. 📜 DATA 300 SIJIL GLOBAL
+
+| Kategori | Bilangan | Contoh Sijil |
+| :--- | :--- | :--- |
+| Keselamatan Siber | 80+ | CISSP, CCSP, CEH, OSCP, GSEC |
+| Cloud & Infrastruktur | 40+ | AWS, Azure, GCP, Kubernetes |
+| AI & Data Science | 35+ | TensorFlow, ML Engineer, AI Ethics |
+| Blockchain & Web3 | 20+ | CBSP, Ethereum, Hyperledger |
+| Pengurusan & Audit | 25+ | ISO 27001, PMP, ITIL |
+| Undang-Undang & Pematuhan | 30+ | GDPR, PDPA, CIPP |
+| Ketenteraan & Intel | 15+ | NATO, INTERPOL, ATM Cyber |
+| Lain-lain | 55+ | HalalTech, ESG, Quantum Computing |
+| **Jumlah** | **300** | |
+
+---
+
+### 9. ⚖️ DATA AKTA & UNDANG-UNDANG (RUJUKAN)
+
+| Akta | No. Akta | Penerangan Ringkas |
+| :--- | :--- | :--- |
+| Akta Hak Cipta 1987 | Akta 332 | Perlindungan hak cipta (Seksyen 36, 41) |
+| Akta Paten 1983 | Akta 291 | Perlindungan paten dan inovasi |
+| Akta Cap Dagangan 2019 | Akta 815 | Perlindungan tanda dagangan |
+| Akta Reka Bentuk Perindustrian 1996 | Akta 552 | Perlindungan reka bentuk |
+| Akta Jenayah Komputer 1997 | Akta 563 | Kesalahan siber dan hukuman |
+| Akta Perlindungan Data Peribadi 2010 | Akta 709 | Perlindungan data peribadi |
+| Akta Pencegahan Pengubahan Wang Haram 2001 | Akta 613 | Perampasan aset |
+| Akta Pengurusan Jenayah 2015 | Akta 769 | Pengurusan jenayah |
+
+---
+
+### 10. 🛰️ DATA SATELIT & TELEMETRI
+
+| Perkara | Nilai |
+| :--- | :--- |
+| Nama Satelit | SGAE-SAT-1 |
+| Orbit | LEO · 550km |
+| Koordinat | 5.64°N, 100.49°E |
+| Isyarat | 🔵 Kuat / 🟢 Sederhana / 🟡 Lemah / 🔴 Tiada |
+| Latensi | 5 - 35 ms |
+| Uplink | ✅ Stabil / 🔄 Berubah / ⚠️ Gangguan |
+
+---
+
+### 11. 🌦️ DATA CUACA & BENCANA (SIMULASI)
+
+| Perkara | Nilai |
+| :--- | :--- |
+| Suhu (KL) | 26°C - 32°C |
+| Kelembapan | 65% - 88% |
+| Hujan | 0 - 20 mm |
+| Angin | 3 - 20 km/h |
+| Paras Laut | 0.2 - 1.5 m |
+| Bencana | ✅ Aman / ⚠️ Ribut / 🔴 Banjir / 🟡 Hujan |
+
+---
+
+### 12. 🏛️ INDEKS KEDAULATAN DIGITAL
+
+| Negara | Indeks |
+| :--- | :--- |
+| Malaysia (MY) | 89.4 |
+| Singapura (SG) | 92.1 |
+| Indonesia (ID) | 72.3 |
+| Thailand (TH) | 78.9 |
+| Amerika Syarikat (US) | 95.7 |
+| China (CN) | 88.2 |
+
+---
+
+### 13. 📊 DATA ANALITIK SISTEM
+
+| Metrik | Nilai |
+| :--- | :--- |
+| Jumlah Aset | RM 13.1B |
+| Transaksi / Saat | 1.2K |
+| Pengguna Aktif | 4,892 |
+| Masa Respons | 34 ms |
+| Uptime | 99.98% |
+| Ketepatan AI | 96.7% |
+
+---
+
+### 14. 📡 STATUS SISTEM LANGSUNG (LIVE)
+
+| Metrik | Nilai |
+| :--- | :--- |
+| CPU Usage | 10% - 40% |
+| RAM Usage | 2.0 - 10.0 GB / 256 GB |
+| Uptime | 99.96% - 100.00% |
+| Sambungan Aktif | 900 - 1,500 |
+| Ancaman Diblok | 12,700 - 13,500 |
+| Model AI | Gemini 1.5 Pro |
+| Ping | 5 - 25 ms |
+| Download | 700 - 900 Mbps |
+| Upload | 300 - 500 Mbps |
+
+---
+
+### 15. 🔮 RAMALAN INDEKS SGAE (1 MINIT & 24 JAM)
+
+| Perkara | Nilai |
+| :--- | :--- |
+| Indeks Semasa | 1050 - 1350 |
+| Ramalan 1 Minit | 1080 - 1380 |
+| Perubahan | -50 hingga +50 |
+| Keyakinan | 80% - 95% |
+| Ramalan 24 Jam | +47 pts (anggaran) |
+
+---
+
+### 16. 🔗 DATA INTEGRASI & PLATFORM
+
+| Platform | Status |
+| :--- | :--- |
+| GitHub Copilot | ✅ Aktif |
+| GitHub Codespaces | ✅ Aktif |
+| GitHub CLI (gh) | ✅ Aktif |
+| GitHub Advanced Security | ✅ Aktif |
+| LUCI Framework | ✅ Aktif |
+| Google Cloud Platform | ✅ Aktif |
+| Google Gemini AI | ✅ Aktif |
+| Google NotebookLM | ✅ Aktif |
+| Google Maps | ✅ Aktif |
+| Firebase Firestore | ✅ Aktif |
+| Firebase Auth | ✅ Aktif |
+| Firebase Hosting | ✅ Aktif |
+| Firebase Functions | ✅ Aktif |
+| FastAPI | ✅ Sumbangan @Sazwan96 |
+| ASP.NET Core 3.1 | ✅ Rujukan E-book |
+
+---
+
+### 17. 🧾 DATA LAIN
+
+| Perkara | Nilai |
+| :--- | :--- |
+| Domain | sazwan.com |
+| SSM Pendaftaran | 202403378912 (AKTIF) |
+| LHDN Cukai | C-77340922 (AKTIF) |
+| MOTAC Lesen Pelancongan | MOTAC-7734/2026 |
+| PDRM Senjata API | FA-2026-07734 |
+| MyIPO Pendaftaran | 20 (4 Paten + 5 Cap Dagangan + 5 Reka Bentuk + 4 Hak Cipta + 2 GI) |
+| Backup Codes Google | 10 kod aktif |
+| Pelawat Laman | 12,847+ |
+| Ketinggian Blok | 847,221+ |
+
+---
+
+## 📌 NOTA PENTING
+- **Semua data adalah simulasi** untuk tujuan demonstrasi portfolio digital berdaulat.
+- Data disimpan secara setempat (`localStorage`) dan **tidak dihantar ke pelayan luar**.
+- Anda boleh **eksport semua data** dalam format JSON, Markdown, CSV, dan cetakan PDF melalui butang di laman.
+- Data boleh **dikemas kini secara manual** atau melalui **auto-update 1 saat**.
+
+---
+
+Jika anda memerlukan **fail HTML lengkap yang telah digabungkan dengan semua data di atas** (termasuk pautan akta), saya boleh menghantarnya dalam satu kod penuh. Beritahu saya! 🚀
